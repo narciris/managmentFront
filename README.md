@@ -1,59 +1,54 @@
-# ManagmentFront
+# projectManagementSystem
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+## 🧩 Caso de uso: Sistema de Gestión de Proyectos para Freelancers
+🎯 Objetivo
+Desarrollar una aplicación web donde freelancers puedan:
 
-## Development server
+Registrarse e iniciar sesión.
 
-To start a local development server, run:
+Crear y administrar proyectos.
 
-```bash
-ng serve
-```
+Subir archivos relacionados a cada proyecto.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Consultar, editar y eliminar sus proyectos.
 
-## Code scaffolding
+## 📚 Tecnologías
+Backend: PHP (usando patrón MVC,PDO)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Frontend: Angular 15+
 
-```bash
-ng generate component component-name
-```
+Base de datos: MySQL
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Autenticación: JWT
 
-```bash
-ng generate --help
-```
+## 🧠 Requisitos funcionales
+👤 Autenticación (Login/Register)
+Registro: nombre, email, contraseña.
 
-## Building
+Login: email y contraseña.
 
-To build the project run:
+JWT: Token devuelto y usado en llamadas posteriores.
 
-```bash
-ng build
-```
+## 📁 Proyectos (CRUD)
+Campos: id, titulo, descripcion, fecha_inicio, fecha_entrega, estado, user_id.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Operaciones:
 
-## Running unit tests
+Crear proyecto (POST)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Ver lista de proyectos del usuario (GET)
 
-```bash
-ng test
-```
+Ver detalle de un proyecto (GET /id)
 
-## Running end-to-end tests
+Editar proyecto (PUT)
 
-For end-to-end (e2e) testing, run:
+Eliminar proyecto (DELETE)
 
-```bash
-ng e2e
-```
+📎 Archivos (Manejo de archivos)
+Subir uno o varios archivos por proyecto.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Ver lista de archivos adjuntos a un proyecto.
 
-## Additional Resources
+Descargar o eliminar archivo.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Validación por tipo de archivo (PDF, imágenes, docs).
