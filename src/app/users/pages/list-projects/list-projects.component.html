@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <div class="row">
+    <!-- inicio -->
+    <div class="col-md-4 mb-4" *ngFor="let project of projects">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ project.name }}</h5>
+          <p class="card-text">{{ project.description }}</p>
+          <p class="card-text">
+            <small class="text-muted">{{ project.startDate }}</small><br>
+            <small class="text-muted">Entrega: {{ project.deliveryDate }}</small><br>
+            <small class="text-muted">Responsable: {{ project.userId }}</small>
+          </p>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+          <button class="btn btn-primary btn-sm">Detalles</button>
+          <button class="btn btn-warning btn-sm">Editar</button>
+          <button class="btn btn-danger btn-sm">Eliminar</button>
+        </div>
+      </div>
+    </div>
+    <!-- Fin de una card -->
+  </div>
+</div>

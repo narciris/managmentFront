@@ -1,0 +1,77 @@
+<div class="container mt-4">
+    <div class="card shadow">
+      <div class="card-header bg-primary text-white">
+        <h5>Crear Proyecto</h5>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text"
+             class="form-control" 
+              formControlName = "name"
+              placeholder="Escribe el nombre el Proyecto"
+              >
+          </div>
+          <div *ngFor="let error of getFieldErrors('name')">
+            <small class="text-danger">{{ error }}</small>
+          </div>
+          
+  
+          <div class="mb-3">
+            <label class="form-label">Descripción</label>
+            <textarea
+             class="form-control"
+             formControlName ="description"
+             placeholder="Una breve descripcion"              
+             required></textarea>
+          </div>
+          <div *ngFor="let error of getFieldErrors('descriptio')">
+            <small class="text-danger">{{ error }}</small>
+          </div>
+  
+          <div class="mb-3">
+            <label class="form-label">Fecha de Inicio</label>
+            <input type="date"
+             class="form-control"
+             formControlName ="startDate"
+             placeholder="fecha de incio del Proyecto"
+             >
+          </div>
+          <div *ngFor="let error of getFieldErrors('startDate')">
+            <small class="text-danger">{{ error }}</small>
+          </div>
+  
+          <div class="mb-3">
+            <label class="form-label">Fecha de Entrega</label>
+            <input 
+            type="date" 
+            class="form-control" 
+            formControlName = "deliveryDate"
+            placeholder="fecha de entrega"
+            >
+          </div>
+          <div *ngFor="let error of getFieldErrors('deliveryDate')">
+            <small class="text-danger">{{ error }}</small>
+          </div>
+  
+  
+          <div class="mb-3">
+            <label class="form-label">Ruta del Archivo</label>
+            <input
+             type="file"
+              class="form-control"
+               formControlName = "filePath"
+               placeholder="Adjunta un Archivo"
+               >
+          </div>
+          <div *ngFor="let error of getFieldErrors('filePath')">
+            <small class="text-danger">{{ error }}</small>
+          </div>
+  
+          <button type="submit" class="btn btn-success" >Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

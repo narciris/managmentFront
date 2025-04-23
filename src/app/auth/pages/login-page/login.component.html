@@ -1,0 +1,46 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h3 class="text-center mb-4">Iniciar sesion</h3>
+  
+            <form (ngSubmit)="onLogin()">
+  
+              <!-- Email -->
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" [(ngModel)]="email" class="form-control" placeholder="Ej: ana@mail.com">
+              </div>
+  
+              <!-- Contraseña -->
+              <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="********">
+              </div>
+  
+              <!-- Confirmar contraseña -->
+              <div class="mb-3">
+                <label class="form-label">Confirmar contraseña</label>
+                <input type="password" class="form-control" placeholder="********" name="password2" [(ngModel)]="password">
+              </div>
+  
+              <!-- Botón -->
+              <div class="d-grid">
+                <button class="btn btn-primary" type="submit">Iniciar sesion</button>
+              </div>
+              <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+
+             <!-- Enlace a registro -->
+          <div class="mt-3 text-center">
+            <a routerLink="/auth/sign-up">¿No tienes una cuenta? Regístrate</a>
+          </div>
+  
+            </form>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
